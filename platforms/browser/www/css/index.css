@@ -44,8 +44,9 @@ body {
     width: 100%;
 }
 
-
-/* Portrait layout (default) */
+.header-wrap {
+    background-color: #fdc9a9;
+}
 
 
 /* Landscape layout (with min-width) */
@@ -246,7 +247,6 @@ nav.primary-navigation ul li {
     text-decoration: none;
     text-align: center;
     font-family: arvo;
-    color: black;
 }
 
 nav.primary-navigation li a:hover {
@@ -301,7 +301,7 @@ a.ui-link {
 }
 
 a:hover {
-    color: #df678c;
+    color: #fdc9a9;
 }
 
 ul li ul li a {
@@ -314,7 +314,7 @@ ul li ul li a {
 form {
     width: 100%;
     margin: 20px auto;
-    background: #efefef;
+    background: #fdc9a9;
     padding: 10px 20px 10px 20px;
     text-align: center;
     -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
@@ -325,8 +325,55 @@ form {
 /*feature*/
 
 .product-box {
+    background: #fdc9a9;
     width: 100%;
-    margin: 20px auto;
-    padding: 10px 20px 10px 20px;
+    margin: 10px auto;
+    padding: 20px 20px 20px 20px;
     text-align: center;
+    -webkit-box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-box h3 {
+    color: #3d155f;
+    font-size: 25px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bold;
+}
+
+.product-box p {
+    color: #3d155f;
+    font-size: 20px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bold;
+}
+
+.footer {
+    background: #fdc9a9;
+}
+
+div.modal-header {
+    background: #fdc9a9;
+    color: #3d155f;
+}
+
+div.modal-header h5 {
+    font-size: 25px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bold;
+}
+
+div.modal-body {
+    background: #fdc9a9;
+    color: #3d155f;
+}
+
+div.modal-body p {
+    font-size: 20px;
+    font-family: "Lucida Console", Courier, monospace;
+    font-weight: bold;
+}
+
+div.modal-footer {
+    background: #fdc9a9;
 }

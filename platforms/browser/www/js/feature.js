@@ -8,7 +8,8 @@ function loadAllData() {
         <div class="product-box">
             <div class="caption">
                 <h3>${data[i].res_name}</h3>
-                <h4>${data[i].res_type}</h4>
+                <img src="${data[i].res_image}">
+                <p>${data[i].res_type}</p>
                 <p>Average Rating: <span>${parseFloat((Number(data[i].res_food) + Number(data[i].res_clean) + Number(data[i].res_service))/3).toFixed(1)}</p>
                 <button id="delete" feedbackId = "${data[i].id}" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                 <button id="detail" class="btn btn-primary" feedbackId = "${data[i].id}" type="button" data-toggle="modal" data-target="#detail1" ><i class="fas fa-info-circle"></i></button>
@@ -38,7 +39,8 @@ $(document).ready(function() {
             res_service: $('#service_rate').val(),
             res_clean: $('#cleanliness_rate').val(),
             res_food: $('#food_rate').val(),
-            res_notes: $('#restaurant_note').val()
+            res_notes: $('#restaurant_note').val(),
+            res_image: "https://doorservers.com/media/images/default_restaurant.png"
         }
 
         createFeedback(rate_data)
@@ -72,9 +74,9 @@ $(document).ready(function() {
                         </button>
                     </div>
                     <div class="modal-body">
-                        <h5>AVG Price: ${feedback.res_averageprice}</h5>
-                        <h5>Type: ${feedback.res_type}</h5>                 
-                        <h5>Date & Time of Visit: ${feedback.res_datetime}</h5>
+                        <img style="width: 100%;max-width: 500px;height: auto;" src="${feedback.res_image}">
+                        <p>AVG Price: ${feedback.res_averageprice}</p>
+                        <p>Type: ${feedback.res_type}</p>                 
                         <p>Service: ${feedback.res_service}</p>
                         <p>Clean: ${feedback.res_clean}</p>
                         <p>Food: ${feedback.res_food}</p>
