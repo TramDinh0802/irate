@@ -1,0 +1,139 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Pontano+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Rate Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!--Test-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Icon-->
+    <script src="https://kit.fontawesome.com/0c8bec0865.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-role="page" id="add-rate">
+        <div class="header-wrap">
+
+            <!--Banner-->
+            <section id="banner">
+                <div class="inner">
+                    <h1>Hey, Rate Me</h1>
+                    <p>Rate Me Make Me Better</p>
+                </div>
+            </section>
+            <!--End Header-->
+
+            <!--Narbar-->
+            <div>
+                <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+
+                <nav role="navigation" class="primary-navigation">
+                    <ul>
+                        <li id="goHome"><a href="#home">Home</a></li>
+                        <li><a href="feedback.html">feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--End Narbar-->
+
+            <!--Feed Back-->
+            <div>
+                <form id="form_rate">
+                    <label>
+                  <p class="label-txt">Restaurant Name</p>
+                  <input type="text" class="input" id="restaurant_name" required>
+                  <div class="line-box">
+                    <div class="line"></div>
+                  </div>
+                  
+                  <p class="label-txt">Reported Name</p>
+                  <input type="text" class="input" id="reported_name" required>
+                  <div class="line-box">
+                    <div class="line"></div>
+                  </div>
+
+                  <p class="label-txt">Avarage Price</p>
+                  <input type="number" class="input" id="avarage_price" required>
+                  <div class="line-box">
+                    <div class="line"></div>
+                  </div>
+                    </label>
+
+                    <label for="service">Restaurant type:</label>
+                    <select name="restaurant_type" id="restaurant_type">
+                        <option value="grill">Grill</option>
+                        <option value="fastfood">Fast Food</option>
+                        <option value="seafood">Sea Food</option>
+                        <option value="cafe">Cafe</option>
+                        <option value="buffet">Buffet</option>
+                      </select>
+
+                    <label for="service">Service ratings:</label>
+                    <select name="service_rate" id="service_rate">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+
+                    <label for="service">Cleanliness rating:</label>
+                    <select name="cleanliness_rate" id="cleanliness_rate">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+
+                    <label for="service">Food quality rating:</label>
+                    <select name="food_rate" id="food_rate">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+
+                    <label> Date & Time</label>
+                    <input type="datetime-local" id="restaurant_datetime" required>
+
+                    <label>Note</label>
+                    <textarea name="note" id="restaurant_note" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--End Feed Back-->
+
+
+    </div>
+</body>
+<script type="text/javascript" src="js/feature.js"></script>
+<script type="text/javascript" src="js/restaurant.js"></script>
+
+
+</html>
