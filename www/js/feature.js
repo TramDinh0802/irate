@@ -27,7 +27,7 @@ $(window).on('load', function() {
 })
 $(document).ready(function() {
     $(document).on('click', '#goHome', function() {
-            navigator.notification.beep(0.5)
+            navigator.notification.beep(20)
             $('#list_data').empty()
             loadAllData()
         })
@@ -36,7 +36,7 @@ $(document).ready(function() {
         //     loadAllData()
         // })
     $(document).on('click', '#goFeedback', function() {
-        navigator.notification.beep(0.5)
+        navigator.notification.beep(20)
     })
     $(document).on('submit', '#form_rate', function() {
         const rate_data = {
@@ -57,7 +57,7 @@ $(document).ready(function() {
     $(document).on('click', '#delete', function() {
         const feedbackId = $(this).attr('feedbackId')
         const result = deleteFeedback(feedbackId)
-        navigator.notification.beep(0.5)
+        navigator.notification.beep(20)
         navigator.vibrate(100)
         result.onsuccess = function() {
             alert("Delete Feedback successfully")
@@ -69,7 +69,7 @@ $(document).ready(function() {
         }
     })
     $(document).on('click', '#detail', function() {
-        navigator.notification.beep(0.5)
+        navigator.notification.beep(20)
         navigator.vibrate(100)
         const feedbackId = $(this).attr('feedbackId')
         const result = getDetail(feedbackId)
