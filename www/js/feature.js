@@ -26,9 +26,17 @@ $(window).on('load', function() {
     loadAllData()
 })
 $(document).ready(function() {
-    $('#goHome').on('click', function() {
-        $('#list_data').empty()
-        loadAllData()
+    $(document).on('click', '#goHome', function() {
+            navigator.notification.beep(0.5)
+            $('#list_data').empty()
+            loadAllData()
+        })
+        // $('#goHome').on('click', function() {
+        //     $('#list_data').empty()
+        //     loadAllData()
+        // })
+    $(document).on('click', '#goFeedback', function() {
+        navigator.notification.beep(0.5)
     })
     $(document).on('submit', '#form_rate', function() {
         const rate_data = {
@@ -60,6 +68,8 @@ $(document).ready(function() {
         }
     })
     $(document).on('click', '#detail', function() {
+        navigator.notification.beep(0.5)
+        navigator.vibrate(100000)
         const feedbackId = $(this).attr('feedbackId')
         const result = getDetail(feedbackId)
         result.onsuccess = function(event) {

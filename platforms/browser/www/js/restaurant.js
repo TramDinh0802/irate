@@ -146,6 +146,7 @@ function createFeedback(feedback) {
 
 function deleteFeedback(feedbackId) {
     feedbackId = Number(feedbackId)
+    navigator.notification.beep(0.5)
     return db.transaction(["RestaurantDatabase"], "readwrite").objectStore("RestaurantDatabase").delete(feedbackId)
 }
 
