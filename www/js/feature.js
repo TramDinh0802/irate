@@ -69,7 +69,7 @@ $(document).ready(function() {
     })
     $(document).on('click', '#detail', function() {
         navigator.notification.beep(0.5)
-        navigator.vibrate(100000)
+        navigator.vibrate(10)
         const feedbackId = $(this).attr('feedbackId')
         const result = getDetail(feedbackId)
         result.onsuccess = function(event) {
