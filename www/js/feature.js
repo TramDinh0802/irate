@@ -57,7 +57,8 @@ $(document).ready(function() {
     $(document).on('click', '#delete', function() {
         const feedbackId = $(this).attr('feedbackId')
         const result = deleteFeedback(feedbackId)
-
+        navigator.notification.beep(0.5)
+        navigator.vibrate(100)
         result.onsuccess = function() {
             alert("Delete Feedback successfully")
             $('#list_data').empty()
@@ -69,7 +70,7 @@ $(document).ready(function() {
     })
     $(document).on('click', '#detail', function() {
         navigator.notification.beep(0.5)
-        navigator.vibrate(10)
+        navigator.vibrate(100)
         const feedbackId = $(this).attr('feedbackId')
         const result = getDetail(feedbackId)
         result.onsuccess = function(event) {
